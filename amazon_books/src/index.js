@@ -29,6 +29,7 @@ const BookList = () => {
 
   return (
     <section className='book-list'>
+      <EventExamples />
       {/* <Book
         author={author} title={title} imageSrc={imageSrc}
       >
@@ -37,14 +38,14 @@ const BookList = () => {
       {books.map((book) => {
         // const {id, author, title, imageSrc} = book;
         // return <Book key={id} author={author} title={title} imageSrc={imageSrc} />
-        return <Book key={book.id} {...book}/>
+        return <Book {...book} key={book.id} />
       })}    
     </section>
   )
 }
 
 const Book = ({author, title, imageSrc, children}) => {
-    return (
+  return (
     <article className='book'>
       <img src={imageSrc} alt={title} />
       <h2>{title}</h2>
@@ -53,6 +54,35 @@ const Book = ({author, title, imageSrc, children}) => {
     </article>
   )
 }
+
+
+const EventExamples = () => {
+  
+  const handleFormInput = (event) => {
+    console.log(event.target.value);
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    alert('Form Submitted');
+  }
+
+  return (
+    <section className='event-examples'>
+      <form>
+        <h2>Typical form</h2>
+        <input 
+          type="text" 
+          placeholder="Enter text" 
+          style={{margin: '1rem 0'}}
+          onChange={handleFormInput}
+        />
+        <button onClick={handleFormSubmit}>Submit</button>
+      </form>
+    </section>
+  )
+}
+
 
 const Image = () => {
   return <img src="./images/book-1.jpg" alt="he Hill We Climb" />
