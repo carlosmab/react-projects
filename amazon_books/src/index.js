@@ -15,11 +15,17 @@ const BookList = () => {
 }
 
 const Book = () => {
-  return <article className='book'>
-    <Image />
-    <Title />
-    <Author />
-  </article>
+  const author = 'Amanda Gorman';
+  const title = 'The Lord of the Rings';
+  const imageSrc = './images/book-1.jpg';
+  
+  return (
+    <article className='book'>
+      <img src={imageSrc} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
+    </article>
+  )
 }
 
 const Image = () => {
