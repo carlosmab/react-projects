@@ -14,11 +14,13 @@ const BookList = () => {
 
   const books = [
     {
+      id: 1,
       author: 'Amanda Gorman',
       title: 'The Lord of the Rings',
       imageSrc: './images/book-1.jpg',
     },
     {
+      id: 2,
       author: 'Sr. Seuss',
       title: "Oh, the Places You'll Go!",
       imageSrc: 'https://images-na.ssl-images-amazon.com/images/I/81a5KHEkwQL._AC_UL900_SR900,600_.jpg',
@@ -33,8 +35,8 @@ const BookList = () => {
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore ducimus,</p> 
       </Book> */}
       {books.map((book) => {
-        const {author, title, imageSrc} = book;
-        return <Book key={title} author={author} title={title} imageSrc={imageSrc} />
+        const {id, author, title, imageSrc} = book;
+        return <Book key={id} author={author} title={title} imageSrc={imageSrc} />
       })}    
     </section>
   )
