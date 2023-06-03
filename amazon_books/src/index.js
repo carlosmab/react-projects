@@ -21,7 +21,7 @@ const Book = () => {
 }
 
 const Image = () => {
-  return <img src="https://images-na.ssl-images-amazon.com/images/I/91QclGg4BjL._AC_UL900_SR900,600_.jpg" alt="" />
+  return <img src="./images/book-1.jpg" alt="he Hill We Climb" />
 }
 
 const Title = () => {
