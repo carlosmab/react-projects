@@ -35,8 +35,9 @@ const BookList = () => {
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore ducimus,</p> 
       </Book> */}
       {books.map((book) => {
-        const {id, author, title, imageSrc} = book;
-        return <Book key={id} author={author} title={title} imageSrc={imageSrc} />
+        // const {id, author, title, imageSrc} = book;
+        // return <Book key={id} author={author} title={title} imageSrc={imageSrc} />
+        return <Book key={book.id} {...book}/>
       })}    
     </section>
   )
