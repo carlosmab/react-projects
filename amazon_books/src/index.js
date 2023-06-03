@@ -27,6 +27,11 @@ const BookList = () => {
 
   return (
     <section className='book-list'>
+      <Book
+        author={author} title={title} imageSrc={imageSrc}
+      >
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore ducimus,</p>
+      </Book>
       {books.map((book) => (
         <Book key={book.title} author={book.author} title={book.title} imageSrc={book.imageSrc} />
       ))}    
@@ -34,12 +39,13 @@ const BookList = () => {
   )
 }
 
-const Book = ({author, title, imageSrc}) => {
+const Book = ({author, title, imageSrc, children}) => {
     return (
     <article className='book'>
       <img src={imageSrc} alt={title} />
       <h2>{title}</h2>
       <h4>{author.toUpperCase()}</h4>
+      {children}
     </article>
   )
 }
