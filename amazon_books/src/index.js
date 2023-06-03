@@ -57,11 +57,15 @@ const Book = ({author, title, imageSrc, children}) => {
 
 
 const EventExamples = () => {
-  
+
   const handleFormInput = (event) => {
     console.log(event.target.value);
   };
 
+  const handleButtonClick = (event) => {
+    console.log(event.target.value);
+  }
+  
   const handleFormSubmit = (event) => {
     event.preventDefault();
     alert('Form Submitted');
@@ -69,7 +73,7 @@ const EventExamples = () => {
 
   return (
     <section className='event-examples'>
-      <form>
+      <form onSubmit={handleFormSubmit}>
         <h2>Typical form</h2>
         <input 
           type="text" 
@@ -77,7 +81,7 @@ const EventExamples = () => {
           style={{margin: '1rem 0'}}
           onChange={handleFormInput}
         />
-        <button onClick={handleFormSubmit}>Submit</button>
+        <button onClick={handleButtonClick}>Submit</button>
       </form>
     </section>
   )
