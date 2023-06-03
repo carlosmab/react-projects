@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
+const fontColor = '#617d98';
+
 const BookList = () => {
   return <section className='book-list'>
     <Book />
@@ -24,8 +26,18 @@ const Image = () => {
   return <img src="./images/book-1.jpg" alt="he Hill We Climb" />
 }
 
+
 const Title = () => {
-  return <h2>The Hill We Climb</h2>
+  const inlineHeadlineStyle = {
+    color: fontColor,
+    fontSize: '1.25rem',
+    marginTop: '0.5rem',
+  }
+  return (
+    <h2 style={inlineHeadlineStyle}>
+      The Hill We Climb
+    </h2>
+  )
 }
 
 const Author = () => {
