@@ -29,7 +29,17 @@ const Title = () => {
 }
 
 const Author = () => {
-  return <h4>Amanda Gorman</h4>
+  const inlineHeadlineStyle = {
+    color: '#617d98',
+    fontSize: '0.75rem',
+    marginTop: '0.5rem',
+  }
+
+  return (
+    <h4 style={inlineHeadlineStyle}>  
+      Amanda Gorman
+    </h4>
+  )
 }
 
 
